@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>InAmigos Foundation | Uniting Minds for Change</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "primary-fixed-dim": "#b0ccca",
+                "surface-dim": "#dbdbcf",
+                "surface-variant": "#e4e3d7",
+                "surface": "#fbfaee",
+                "primary": "#163130",
+                "tertiary-fixed-dim": "#d6c4af",
+                "secondary-fixed-dim": "#b7ccb7",
+                "primary-container": "#2d4746",
+                "secondary-container": "#d0e5d0",
+                "on-primary-container": "#99b5b3",
+                "error-container": "#ffdad6",
+                "on-primary-fixed-variant": "#314b4a",
+                "outline-variant": "#c1c8c7",
+                "on-tertiary-fixed": "#231a0d",
+                "on-tertiary": "#ffffff",
+                "secondary-fixed": "#d2e8d3",
+                "tertiary-container": "#4d4131",
+                "surface-container-highest": "#e4e3d7",
+                "on-secondary": "#ffffff",
+                "on-secondary-container": "#546756",
+                "secondary": "#506352",
+                "inverse-on-surface": "#f2f1e5",
+                "on-tertiary-container": "#bead99",
+                "surface-container-low": "#f5f4e8",
+                "on-surface": "#1b1c15",
+                "tertiary": "#352b1d",
+                "on-error": "#ffffff",
+                "on-background": "#1b1c15",
+                "on-error-container": "#93000a",
+                "primary-fixed": "#cbe8e6",
+                "outline": "#727878",
+                "error": "#ba1a1a",
+                "on-surface-variant": "#414847",
+                "surface-container": "#efeee3",
+                "tertiary-fixed": "#f2e0ca",
+                "inverse-surface": "#303129",
+                "surface-bright": "#fbfaee",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-fixed-variant": "#514535",
+                "surface-container-high": "#e9e9dd",
+                "on-primary-fixed": "#041f1f",
+                "surface-tint": "#496362",
+                "inverse-primary": "#b0ccca",
+                "background": "#fbfaee",
+                "on-secondary-fixed": "#0e1f12",
+                "on-primary": "#ffffff",
+                "on-secondary-fixed-variant": "#394b3b"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "section-gap": "80px",
+                "margin-desktop": "64px",
+                "container-max": "1120px",
+                "gutter": "24px",
+                "unit": "8px",
+                "margin-mobile": "16px"
+        },
+        "fontFamily": {
+                "headline-md": [
+                        "Libre Caslon Text"
+                ],
+                "label-md": [
+                        "Source Sans 3"
+                ],
+                "body-lg": [
+                        "Source Sans 3"
+                ],
+                "body-md": [
+                        "Source Sans 3"
+                ],
+                "caption": [
+                        "Source Sans 3"
+                ],
+                "headline-lg": [
+                        "Libre Caslon Text"
+                ],
+                "display-lg": [
+                        "Libre Caslon Text"
+                ],
+                "display-lg-mobile": [
+                        "Libre Caslon Text"
+                ]
+        },
+        "fontSize": {
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "caption": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "400"
+                        }
+                ],
+                "display-lg-mobile": [
+                        "36px",
+                        {
+                                "lineHeight": "44px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .glass-panel {
+            background: rgba(251, 250, 238, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(193, 200, 199, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-md text-primary dark:text-on-primary docked full-width top-0 sticky z-50 border-b border-outline-variant/30 flat no shadows">
+<div class="flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<a class="flex items-center gap-1 font-headline text-2xl tracking-tight text-primary" href="home.html">
+  <img alt="InAmigos Foundation Logo" class="h-12 w-auto object-contain" src="logo.png"/>
+  <span>InAmigos Foundation</span>
+</a>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-label-md text-label-md uppercase">
+<a aria-current="page" class="text-secondary dark:text-secondary-fixed border-b-2 border-secondary pb-1 opacity-90 transition-opacity" href="home.html">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:opacity-80 transition-all duration-300" href="about_us.html">About Us</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:opacity-80 transition-all duration-300" href="volunteers.html">Volunteers</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:opacity-80 transition-all duration-300" href="gallery.html">Gallery</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors hover:opacity-80 transition-all duration-300" href="blog.html">Blog</a>
+</nav>
+<div class="hidden md:flex items-center gap-4">
+<a class="font-label-md text-label-md uppercase text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+<a class="bg-primary text-on-primary px-6 py-3 rounded-DEFAULT font-label-md text-label-md uppercase hover:bg-primary/90 transition-colors" href="#">Donate</a>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Three young, smiling Indian girls sitting against a vibrant, textured blue wall. The girl in the foreground is holding a book in Bengali, wearing a blue and white checkered school uniform. They look directly at the camera with joyful expressions, conveying hope and education. The lighting is soft natural daylight, emphasizing their bright faces." class="w-full h-full object-cover object-center" data-alt="Three young, smiling Indian girls sitting against a vibrant, textured blue wall. The girl in the foreground is holding a book in Bengali, wearing a blue and white checkered school uniform. They look directly at the camera with joyful expressions, conveying hope and education. The lighting is soft natural daylight, emphasizing their bright faces." src="https://lh3.googleusercontent.com/aida/ADBb0uh0WUUwzR236mueGfeAwESVRn8Uoa6broUjnMFqntN-oM_g6G9t5Tmb7T0oUOTUFsfFzrlfbGzKgFHsRl6PJXKCSJKMpzwF3xD2MgIzf2JASzBOpWs4tw1hn73tj-nElZRdsLKfMhoGZyDfK5829FPiAzIzHUTxDwzdhCgJAosGZOVCa72_rwGXqZAQGg8UWkxGW2vJ3mFNtNX5vlPF5GiIdSB1T5jsc2CGP2xQdJT3bNRnkOPxw7iMiwv8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tertiary/80 via-tertiary/40 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center md:text-left mt-20">
+<div class="max-w-2xl">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-4">
+                        Nurturing Young Minds
+                    </h2>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-lg">
+                        Ensuring quality education for underprivileged children, building bright futures step by step.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Mission & Call to Action -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="max-w-3xl glass-panel p-8 md:p-12 rounded-xl mx-auto">
+<span class="font-label-md text-label-md text-secondary mb-4 block tracking-[0.2em] uppercase">InAmigos Foundation</span>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">
+                        Uniting Minds for Change
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-2xl">
+                        A Section 8 registered non-profit organization dedicated to creating an inclusive, compassionate, and empowered society through education, welfare, and sustainability.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-secondary text-on-secondary px-8 py-4 rounded-DEFAULT font-label-md text-label-md uppercase text-center hover:bg-secondary-container hover:text-on-secondary-container transition-colors inline-flex items-center justify-center gap-2" href="#">
+<span>Donate Today</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+<a class="border border-primary text-primary px-8 py-4 rounded-DEFAULT font-label-md text-label-md uppercase text-center hover:bg-surface-variant transition-colors" href="#">
+                            Become A Volunteer
+                        </a>
+</div>
+</div>
+</section>
+<!-- About Us & Founder -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+<div class="lg:col-span-5 relative order-2 lg:order-1">
+<div class="aspect-[4/5] rounded-xl overflow-hidden relative shadow-lg border border-outline-variant/30 bg-surface-container-lowest">
+<img alt="A group of smiling children gathered outdoors in warm sunlight, full of joy and energy." class="w-full h-full object-cover object-center" src="{8C094177-B6BA-4572-9A42-A95E6652E933}.png"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-surface-container-lowest border border-outline-variant/30 rounded-full flex items-center justify-center p-6 shadow-sm hidden md:flex">
+<p class="font-headline-md text-body-md text-center italic text-on-surface-variant">
+                                                        "Scholarly Compassion in Action."
+                                                </p>
+</div>
+</div>
+<div class="lg:col-span-7 lg:pl-12 order-1 lg:order-2">
+<span class="font-label-md text-label-md text-secondary mb-6 block tracking-widest uppercase">Get to Know Us Better</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-8 leading-tight">
+                                                Empowering lives through structured intervention and genuine compassion.
+                                        </h2>
+<div class="font-body-md text-body-md text-on-surface-variant space-y-6">
+<p>
+                                                        InAmigos Foundation was founded on September 23, 2020, by Mr. Govind Shukla (Founder &amp; CEO). It is a Section 8 registered non-profit organization, licensed by the Central Government, with its base in Chhattisgarh.
+                                                </p>
+<p>
+                                                        We hold 80G &amp; 12A certifications, ensuring transparency, accountability, and tax-exempt benefits for donors. Our CSR-1 registration allows us to collaborate with corporate partners, while our NITI Aayog and IAF ISO 9001:2015 certifications signify our commitment to national development and high-quality service delivery.
+                                                </p>
+<p>
+                                                        At InAmigos Foundation, we believe in the power of collective action. Every contribution is directed towards essential causes such as food distribution, education, women empowerment, animal welfare, and environmental sustainability across India.
+                                                </p>
+</div>
+<div class="mt-10">
+<a class="inline-flex items-center gap-2 border-b border-primary text-primary pb-1 font-label-md text-label-md uppercase hover:text-secondary hover:border-secondary transition-colors" href="#">
+<span>Read Our Full Story</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Initiatives (Bento Grid) -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-16">
+<span class="font-label-md text-label-md text-secondary mb-4 block tracking-widest uppercase">Our Causes</span>
+<h2 class="font-headline-md text-headline-md text-primary">Key Initiatives</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+<!-- Bachpanshala (Large) -->
+<div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-xl bg-surface-container border border-outline-variant/30 flex flex-col justify-end p-8">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent z-10"></div>
+<img alt="A group of adults and children holding drawings outdoors in warm sunlight." class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="1738054440 (1).jpg"/>
+<div class="relative z-20">
+<span class="font-label-md text-label-md text-secondary-fixed mb-3 inline-block px-3 py-1 bg-primary/50 backdrop-blur-sm rounded-DEFAULT border border-white/20 uppercase">Project Bachpanshala</span>
+<h3 class="font-headline-md text-headline-md text-white mb-2">Nurturing Young Minds</h3>
+<p class="font-body-md text-body-md text-surface-variant max-w-lg mb-6">Ensuring quality education for underprivileged children, building bright futures step by step.</p>
+<a class="inline-flex items-center gap-2 text-white font-label-md text-label-md uppercase hover:text-secondary-fixed transition-colors" href="#">
+<span>Learn More</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Seva -->
+<div class="relative overflow-hidden rounded-xl border border-outline-variant/30 min-h-[300px] flex flex-col justify-end p-6 hover:border-secondary transition-colors group">
+<img alt="A group of volunteers and children holding drawings outdoors in warm sunlight." class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="1690908498.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/45 to-transparent"></div>
+<div class="relative z-10">
+<div class="w-12 h-12 bg-secondary-container/90 text-on-secondary-container rounded-full flex items-center justify-center mb-4 backdrop-blur-sm">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<span class="font-label-md text-label-md text-secondary-fixed mb-2 block uppercase">Project Seva</span>
+<h3 class="font-headline-md text-xl font-bold text-white mb-3">Serving Humanity</h3>
+<p class="font-body-md text-sm text-surface-variant">Providing food and essential clothing to the underprivileged communities across regions.</p>
+</div>
+</div>
+<!-- Udaan -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/30 flex flex-col p-6 hover:border-secondary transition-colors group">
+<div class="mb-auto">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">flight_takeoff</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant mb-2 block uppercase">Project Udaan</span>
+<h3 class="font-headline-md text-xl font-bold text-primary mb-3">Women Empowerment</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Fostering financial independence through skill development and vocational training.</p>
+</div>
+</div>
+<!-- Jeev -->
+<div class="relative overflow-hidden rounded-xl border border-outline-variant/30 min-h-[300px] flex flex-col justify-end p-6 hover:border-secondary transition-colors group">
+<img alt="A volunteer caring for puppies during an animal welfare activity." class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="1690908380.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/45 to-transparent"></div>
+<div class="relative z-10">
+<div class="w-12 h-12 bg-secondary-container/90 text-on-secondary-container rounded-full flex items-center justify-center mb-4 backdrop-blur-sm">
+<span class="material-symbols-outlined">pets</span>
+</div>
+<span class="font-label-md text-label-md text-secondary-fixed mb-2 block uppercase">Project Jeev</span>
+<h3 class="font-headline-md text-xl font-bold text-white mb-3">Animal Welfare</h3>
+<p class="font-body-md text-sm text-surface-variant">Empowering lives and spreading compassion through rescue, protection, and feeding initiatives.</p>
+</div>
+</div>
+<!-- Prakriti & Vikas (Spanning 2 columns below) -->
+<div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="relative overflow-hidden rounded-xl border border-outline-variant/30 min-h-[300px] flex flex-col justify-end p-6 hover:border-secondary transition-colors group">
+<img alt="A volunteer planting a young sapling in a green outdoor area." class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="1690908369.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/45 to-transparent"></div>
+<div class="relative z-10">
+<div class="w-12 h-12 bg-secondary-container/90 text-on-secondary-container rounded-full flex items-center justify-center mb-4 backdrop-blur-sm">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<span class="font-label-md text-label-md text-secondary-fixed mb-2 block uppercase">Project Prakriti</span>
+<h3 class="font-headline-md text-xl font-bold text-white mb-2">Plant for Tomorrow</h3>
+<p class="font-body-md text-sm text-surface-variant">Environmental conservation and sustainability efforts for a greener earth.</p>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/30 flex flex-col p-6 hover:border-secondary transition-colors">
+<div class="w-12 h-12 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">engineering</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant mb-2 block uppercase">Project Vikas</span>
+<h3 class="font-headline-md text-xl font-bold text-primary mb-2">Enhancing Employability</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Skill development programs designed to create sustainable livelihood opportunities.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-background dark:bg-surface-container-lowest text-on-secondary dark:text-primary font-body-md text-body-md full-width mt-section-gap flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-gutter py-section-gap max-w-container-max mx-auto">
+<div class="col-span-1 flex flex-col">
+<h4 class="font-label-md text-label-md text-surface-container-lowest mb-6 uppercase tracking-widest">Useful Links</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-white transition-colors hover:underline transition-all" href="#">Events</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-white transition-colors hover:underline transition-all" href="#">Volunteers</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-white transition-colors hover:underline transition-all" href="#">Gallery</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-white transition-colors hover:underline transition-all" href="#">Blog</a>
+</nav>
+</div>
+<div class="col-span-1 flex flex-col">
+<h4 class="font-label-md text-label-md text-surface-container-lowest mb-6 uppercase tracking-widest">Categories</h4>
+<nav class="flex flex-col gap-3">
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-white transition-colors hover:underline transition-all" href="#">pages</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-white transition-colors hover:underline transition-all" href="#">About Us</a>
+<a class="text-surface-variant dark:text-on-surface-variant hover:text-white transition-colors hover:underline transition-all" href="#">Contact</a>
+</nav>
+</div>
+<div class="col-span-1 flex flex-col">
+<h4 class="font-label-md text-label-md text-surface-container-lowest mb-6 uppercase tracking-widest">Contact Us</h4>
+<div class="flex flex-col gap-4 text-surface-variant text-sm">
+<div>
+<p class="hover:text-white transition-colors">Ward No. 5, Gram Post, Sipat Ujwal Nagar, Bilaspur. Chhattisgarh Pin-Code: 495555</p>
+</div>
+<a class="hover:text-white transition-colors hover:underline flex items-center gap-2" href="mailto:inamigosfoundation@gmail.com">
+<span class="material-symbols-outlined text-sm">mail</span>
+                        inamigosfoundation@gmail.com
+                    </a>
+<a class="hover:text-white transition-colors hover:underline flex items-center gap-2" href="tel:+916267309902">
+<span class="material-symbols-outlined text-sm">call</span>
+                        +91 626 730 9902
+                    </a>
+<div class="pt-2">
+<h5 class="font-label-md text-label-md text-surface-container-lowest mb-3 uppercase tracking-widest">Connect</h5>
+<div class="flex items-center gap-4">
+<a aria-label="Instagram" class="text-surface-variant hover:text-white transition-colors" href="https://www.instagram.com/inamigos/" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M7 2C4.238 2 2 4.238 2 7v10c0 2.762 2.238 5 5 5h10c2.762 0 5-2.238 5-5V7c0-2.762-2.238-5-5-5H7zm0 2h10c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3zm11 1.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5zM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"></path></svg>
+</a>
+<a aria-label="Facebook" class="text-surface-variant hover:text-white transition-colors" href="https://www.facebook.com/inamigos.inamigos" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3H13.5V8.5c0-.9.3-1.5 1.6-1.5H16.8V4.3c-.3 0-1.4-.1-2.7-.1-2.7 0-4.6 1.6-4.6 4.6V11H7v3h2.5v8h4z"></path></svg>
+</a>
+<a aria-label="LinkedIn" class="text-surface-variant hover:text-white transition-colors" href="https://in.linkedin.com/company/inamigos-foundation" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M6.94 6.5A1.94 1.94 0 1 1 6.94 2.62a1.94 1.94 0 0 1 0 3.88zM3.5 8.5h6.9V21h-6.9V8.5zm9.1 0h6.6v1.7h.1c.9-1.4 2.4-2.1 4.1-2.1 4.4 0 5.2 2.9 5.2 6.6V21h-6.9v-5.6c0-1.3 0-3-1.9-3s-2.2 1.5-2.2 2.9V21h-6.9V8.5z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-surface-variant/20 py-6 mt-8">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center text-sm text-surface-variant opacity-80">
+<p>© 2026 InAmigos Foundation. All Rights Reserved.</p>
+<p class="mt-2 md:mt-0">Developed by <a class="hover:text-white transition-colors hover:underline" href="https://www.linkedin.com/in/vinay-adimulam-5a83b8375/" rel="noopener noreferrer" target="_blank">Adimulam Vinay</a></p>
+</div>
+</div>
+</footer>
+</body></html>
